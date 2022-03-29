@@ -53,7 +53,6 @@ class BaseSoC(SoCCore):
         # SoCCore ----------------------------------------------------------------------------------
         SoCCore.__init__(self, platform, sys_clk_freq,
             ident         = "LiteX SoC on Efinix Titanium Ti60 F225 Dev Kit",
-            ident_version = True,
             **kwargs
         )
 

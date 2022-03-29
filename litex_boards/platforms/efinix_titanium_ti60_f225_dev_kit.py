@@ -86,6 +86,21 @@ _io = [
         Subsignal("data3", Pins("E12"), IOStandard("1.2_V_LVCMOS")),
         Misc("SLEWRATE=FAST")
     ),
+
+    # MIPI
+    ("mipi_rx", 0,
+        Subsignal("clk",   Pins("M15"), IOStandard("1.2_V_LVCMOS")),
+        Subsignal("data0", Pins("K11"), IOStandard("1.2_V_LVCMOS")),
+        Subsignal("data1", Pins("L13"), IOStandard("1.2_V_LVCMOS")),
+        Misc("SLEWRATE=FAST")
+    ),
+
+    ("cam_i2c", 0,
+        Subsignal("sda",   Pins("H4"), Misc("WEAK_PULLUP")),
+        Subsignal("scl",   Pins("H5"), Misc("WEAK_PULLUP")),
+        Subsignal("reset", Pins("R14")),
+        IOStandard("1.8_V_LVCMOS")
+    ),
 ]
 
 iobank_info = [
@@ -93,14 +108,14 @@ iobank_info = [
             ("1B", "1.8 V LVCMOS"),
             ("2A", "1.8 V LVCMOS"),
             ("2B", "1.8 V LVCMOS"),
-            ("3A", "1.8 V LVCMOS"),
-            ("3B", "1.8 V LVCMOS"),
-            ("4A", "1.8 V LVCMOS"),
-            ("4B", "1.8 V LVCMOS"),
-            ("BL", "3.3 V LVCMOS"),
+            ("3A", "1.2 V LVCMOS"),
+            ("3B", "1.2 V LVCMOS"),
+            ("4A", "1.2 V LVCMOS"),
+            ("4B", "1.2 V LVCMOS"),
+            ("BL", "1.8 V LVCMOS"),
             ("BR", "1.8 V LVCMOS"),
             ("TL", "1.8 V LVCMOS"),
-            ("TR", "3.3 V LVCMOS"),
+            ("TR", "1.8 V LVCMOS"),
 ]
 
 # Connectors ---------------------------------------------------------------------------------------
